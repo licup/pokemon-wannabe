@@ -19,10 +19,6 @@ Items::Items(string name, string desc, bool isHeal, int heal) : name(name), desc
     //empty
 }
 
-Items::Items(string name, bool isHeal, int heal) : name(name), isHeal(isHeal), heal(heal){
-    //empty
-}
-
 void Items::print()const{
     if(isHeal)
         cout << "Name: " << name << endl << "Description: " << desc << endl << "Health gain: " << heal << endl;
