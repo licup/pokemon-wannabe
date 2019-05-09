@@ -18,17 +18,16 @@ public:
     static int slot;
     
     Inventory();
-    Inventory(vector<Items> item, int quantity);
+    Inventory(vector<Items> item);
     
     //Getters and Setters
     Items getItem()const{return item[slot]; slot++;}
     int getQuantity()const{return quantity;}
     
     void setItem(const vector<Items> &itemName);
-    void setQuantity(int quant){this -> quantity = quant;}
+
 private:
     vector<Items> item; //vector being used so that you do not need to run a loop in order to set all the values of the array
-    int quantity;
 };
 
 #endif /* Inventory_hpp */
