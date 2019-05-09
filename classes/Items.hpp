@@ -1,10 +1,6 @@
 //
 //  Items.hpp
 //  PokemonGame
-//
-//  Created by Jr on 4/18/19.
-//  Copyright © 2019 Edgar Licup. All rights reserved.
-//
 
 #ifndef Items_hpp
 #define Items_hpp
@@ -17,7 +13,6 @@ public:
     //Constructors
     Items();
     Items(string name, string desc, bool isHeal); //if the item doesn't heal
-    Items(string name, bool isHeal, int heal); //if the item heals and you're in a battle
     Items(string name, string desc, bool isHeal, int heal); //if **the item does heal
     
     
@@ -34,7 +29,7 @@ public:
     void setIsHeal(bool isHeal){this -> isHeal = isHeal;}
     
     //Other Methods
-    void print()const; //prints out the info based on the object
+    virtual void print()const; //prints out the info based on the object
     
 private:
     string name, desc;
