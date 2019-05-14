@@ -11,23 +11,23 @@
 
 #include "Items.hpp"
 #include <iostream>
-#include <vector>
+
 
 class Inventory : public Items {
 public:
-    static int slot;
-    
     Inventory();
-    Inventory(vector<Items> item);
+    Inventory(Items item);
     
     //Getters and Setters
-    Items getItem()const{return item[slot]; slot++;}
-    int getQuantity()const{return quantity;}
+    Items getItem(int ind){
+        return this->item[ind];
+    }
+    void setItem(int ind, Items item){
+        this->item[ind] = item;
+    }
     
-    void setItem(const vector<Items> &itemName);
-
 private:
-    vector<Items> item; //vector being used so that you do not need to run a loop in order to set all the values of the array
+    Items item[5]; 
 };
 
 #endif /* Inventory_hpp */
