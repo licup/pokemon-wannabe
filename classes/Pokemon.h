@@ -22,6 +22,8 @@ class Pokemon
         void set_poke_offense_pwr(int poke_offense_pwr){this -> poke_offense_pwr = poke_offense_pwr;}
         // Other
         void display()const;
+        void lowerHP(Pokemon& hp); //Function used when a pokemon attacks
+        void higherHP(Inventory i, int ind); //Function used when a healing item is used
     private:
         string poke_name, poke_type, poke_offense;
         int poke_level, poke_offense_pwr;
