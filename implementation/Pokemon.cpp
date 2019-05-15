@@ -1,4 +1,5 @@
 #include "Pokemon.h"
+#include "Inventory.hpp"
 #include <iostream>
 using namespace std;
 
@@ -26,4 +27,12 @@ void display()const
     cout << poke_level << endl;
     cout << poke_type << endl;
     cout << poke_offense << endl;
+}
+void Pokemon::lowerHP(Pokemon& hp){
+    this -> health -= hp.get_poke_offense_pwr();
+}
+
+void Pokemon::higherHP(Inventory i, int ind){
+    this -> health += i.getItem(ind).getHeal();
+    
 }
