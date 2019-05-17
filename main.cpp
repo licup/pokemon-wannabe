@@ -229,7 +229,7 @@ int main()
 {
     int choice;
     bool inGame;
-    cout << "Which game mode? (1/2)" << endl;
+    cout << "Which game mode? (1/2) 1 is SFML Based, 2 is Text Based." << endl;
     cin >> choice;
     if(choice == 1)
         inGame = true;
